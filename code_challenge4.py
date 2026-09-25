@@ -1,14 +1,23 @@
-username = "roiroi123"
-password = "kumag123"
+print("------------Login Account----------------")
 
-u = input("Input Username ---> ")
-p = getpass.getpass("Input Password ---> ")
+correct_username =""
+correct_password =""
+#Asking for user login details
+username= input("Please enter your username --->:")
+password= input("Please enter your password --->:")
 
-if u == username and p == password: 
-     print("username and password correct")
-
-else:
-     print("ACCESS DENIED")
+#username description
+if username ==  correct_username and password == correct_password:
+    print("\nYour username and password is correct! you may proceed")
+    #Inputs
+    Full_name= input("Please enter your Full name--->")
+    age= int(input("Enter your age --->"))
+    
+    is_employed = input("Are you employed? (True/False):")
+    
+    Job_description=input("Enter your job description:")
+    credit_score= int(input("What is your credit_score history?"))
+    annual_income= eval(input("How much is your annual income? --->"))
 
 
 
