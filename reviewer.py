@@ -21,7 +21,7 @@ if owner_age >= 21 and years_in_business >= 2.0 and has_default == False:
         else:
             base_fee = max_loan * 0.025
             print("base free rate is",base_fee)
-    elif credits_score <= 620 and credits_score <720:
+    elif credits_score <= 620 and credits_score <720: #tier 2
         max_loan = monthly_revenue * 1.5
         if years_in_business >= 5:
             base_fee = max_loan * 0.02
@@ -32,4 +32,7 @@ if owner_age >= 21 and years_in_business >= 2.0 and has_default == False:
     elif credits_score < 620:
         print("credit score too low for loan")
     else:
-        print("not tier1")  
+        print("not tier1") 
+else: 
+    print("Rejected: High Risk Application or Ineligeble Owner")
+    
