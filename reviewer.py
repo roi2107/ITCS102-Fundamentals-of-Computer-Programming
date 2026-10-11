@@ -11,22 +11,22 @@ collateral_value = float(input("COLLATERAL VALUE --->"))
 max_loan = 0
 base_fee = 0
 
-if age >= 21 and years >= 2.0 and has_defaults == False:
+if owner_age >= 21 and years >= 2.0 and has_defaults == False:
     print("BASELINE PASSED")
-    if cs >= 720: #tier 1
-        max_loan = rev * 3
+    if credit_score >= 720: #tier 1
+        max_loan = revenue * 3
         print("MAXIMUM LOANABLE AMOUNT IS SET TO", max_loan)
         print("HIGH CREDIT SCORE")
-        if rev >= 50000:
+        if revenue >= 50000:
             print("REVENUE IS HIGHER THAN 50K")
             base_fee = max_loan * 0.015
 
 
     elif cs >= 620 and cs >= 720: #tier2
         print("Credit Score withn Range of 620 to 720")
-        max_loan = rev * 1.5
+        max_loan = revenue * 1.5
         print("Maximum Loan for this credit score is", max_loan)
-        if years >= 5:
+        if years_in_business >= 5:
             print("Business year are more than 5 years")
             base_fee = max_loan * 0.02
             print("Base fee rate is set to", base_fee)
@@ -36,13 +36,13 @@ if age >= 21 and years >= 2.0 and has_defaults == False:
             print("Base fee is set to", base_fee)
 
 
-    elif cs >= 620 and cs >= 1: #tier3
-        print("Credit score are too lowwww")
+    elif credit_score >= 620 and credit_score >= 1: #tier3
+        print("Decline, Credit Score too Low!")
 
-        if c_value >= max_loan:
-            print("Collateral ",collateral,"with a value of", c_value, "is ACCEPTED")
+        if collateral_value >= max_loan:
+            print("Accepted ",collateral,"with a value of", collateral_value, "is ACCEPTED")
         else :
-            print("Rejected: Insufficient collateral value for", collateral)
+            print("Rejected: Insufficient collateral value for", collateral_value)
 
     surge_fee_rate = max_loan = base_fee 
     print("Additional Charged of", surge_fee_rate)
