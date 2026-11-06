@@ -1,5 +1,23 @@
-for x in range(6,0,-1):
-    for y in range(1, x + 1):
-        if y == 1 or y == x or x == 6:
-          print("*", end="")
-    print("")
+rows = int(input("Enter the number of rows: "))
+
+for i in range(rows - 1):
+    for j in range(i, rows):
+        print(" ", end=" ")
+    
+    for j in range(i):
+        print("*", end=" ")
+        
+    for j in range(i + 1):
+        print("*", end=" ")        
+    print()    
+    
+for i in range(rows):
+    for j in range(i + 1):
+        print(" ", end=" ")
+    
+    for j in range(i, rows - 1):
+        print("*", end=" ")
+        
+    for j in range(i, rows):
+        print("*", end=" ")        
+    print()    
